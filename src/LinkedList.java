@@ -91,6 +91,42 @@ public class LinkedList<T> {
         }
     }
 
+    /**
+     * Добавление значения в конец связанного списка
+     * @param value значение
+     */
+    public void addLast(T value){
+        Node node = new Node();
+        node.value = value;
+        if (head == null){
+            head = node;
+        }
+        else {
+            Node lastNode = head;
+            while (lastNode.next != null){
+                lastNode = lastNode.next;
+            }
+            lastNode.next = node;
+        }
+    }
+
+    /**
+     * Удаление элемента из конца списка
+     */
+    public void removeLast(){
+        if (head == null)
+            return;
+        Node node = head;
+        while (node.next != null){
+            if (node.next.next == null){
+                node.next = null;
+                return;
+            }
+            node = node.next;
+        }
+        head = null;
+    }
+
     public void reverse(){
         Node node = head;
         while(node != null){

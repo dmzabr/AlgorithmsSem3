@@ -22,15 +22,14 @@ public class Main {
 
         //list.sort((new EmployeeComparator()));
 */
+        list.removeFirst();
+        list.removeLast();
+
         list.reverse();
         System.out.println("\n");
         System.out.println(list);
 
         list.reverse();
         System.out.println(list);
-
-
-
-
     }
 }
